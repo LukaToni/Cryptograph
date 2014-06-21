@@ -1,0 +1,110 @@
+In today's "post-Snowden" age is nothing unusual if people are concerned about the security of electronic
+communication. And it came to pass that the paranoid mistrust of existing tools for skrivnopisje succumbed to the
+France and Ferdo, so are you planning on my own conversion process clean copy of Crypto. To carry out encryption
+we need some text to be agreed prior to the exchange secret messages, and serves as the encryption key. On
+Using this text and the desired message then the process of creating their own encryption Crypto, which can be
+exchange over a public communication infrastructure without fear that someone failed to read the hidden message. In fact,
+in this regard is likely to interfere, but it's us in this task do not care.
+
+The encryption process
+
+Assume that both France and Ferdo agreed that the encryption key the same stanza poem "Ring, Ring of paradise":
+
+ringa ringa raja
+muca pa nagaja
+kuža pa priteče
+pa vse na tla pomeče
+
+If you would like to send France Ferdu secret message (such as "river"), it must be written in the form of initials lines, etc.
+as another France wrote a sonnet its way to the initials of the sonnet form the name of his love. Since then, our
+France and Ferdo with honors Slovenian primary task, to them it is clear that this method of concealment is not very effective,
+France therefore our hiding a little complicated. A few lines (0 or more) necessary for the formation of initials finds in the text
+encryption key. When this is the case a simple rule: if the letter am in the message in front of an letter, then must also
+row with the initial of the letter in question, referred to as the encryption key located before the row with the initial of the letter
+an. France would be, for example, the letters r and the chosen first and third line of the encryption key:
+
+ringa ringa raja
+muca pa nagaja
+kuža pa priteče
+pa vse na tla pomeče
+
+The rest - the missing letter of the message presented to the appropriate places in the text encryption key added a new line
+with appropriate initials. In this case again, the previously described simple rules. Modified encryption key after that
+step may look like for example (bold letters indicate oblique lines added):
+
+ringa ringa raja
+ena miš prihaja
+muca pa nagaja
+kuža pa priteče
+pa vse na tla pomeče
+avto ima blatnike bleščeče
+
+
+At the end of France as amended text encryption key deletes all rows that represent the letters of the hidden
+messages and are part of the original encryption key, but leave those rows that do not represent the letters of the hidden messages, and those
+line, which has added to the text encryption key. Thus, twice as amended text encryption key represents
+encrypted message sent by France Ferdu. In this case, it would be an encrypted message by:
+
+ena miš prihaja
+muca pa nagaja
+pa vse na tla pomeče
+avto ima blatnike bleščeče
+
+Decryption process
+
+Ferdo wants to read the secret message. Available to the original encryption key and the encrypted message received. It must find a
+lines that were izbisane from the text of the original encryption key and must find lines that have been added to the text
+encryption key. Initials of deleted and added lines in sequence, as are the (revised) encryption
+key, representing the secret message. Ferdo can not determine the order of some lines if they were new lines
+just added to the site erased. In this case an agreement to appear first deleted and then added to the line.
+Task
+Write a program in C programming language, on the basis of the encryption key and decrypt the encrypted procedure described
+message.
+80% of reviews:
+To make the task a little easier, you can for four of the five test cases when evaluating solutions assume that the lines
+the encryption key including fortification lines differ.
+20% of the estimate (demanding test case)
+In one of the test cases in the evaluation of the solution will not be taken into account the above restrictions on the rows and the
+also contain lines that occur repeatedly. Whereas, in this case the solution more subject to an arrangement that is the correct one to
+at least deleted and added lines (optimal solution). You can assume that the sender is sure that
+there is only one optimal solution, but if it is more, then, any of them correctly. Tip for demanding example:
+description of Unix / Linux tools diff and description of the algorithm for finding the longest common subsequences (LCS).
+Input and output data
+The encryption key is written in a file whose name is given as the first argument when starting the program. The encrypted message is
+reads in a file whose name is given as the second argument when starting the program. The number of lines in each file
+is greater than or equal to 0 and less than 1000. individual rows shorter than 100 characters. The program should decrypted message
+written to the file whose name is given as the third argument when starting the program. Decrypted message complete with one
+sign for the transition to a new line ('\ n').
+Examples
+In addition to the situations described above are set out below are three examples.
+
+Encryption key: 
+
+Encryption key:           Crypto:             Cleartext:
+riba je                   nema                reka
+nema                      kot nič
+ena ni                    petelin kikirika
+kot nič                   ladja pluje
+kokoš kokodaka
+petelin kikirika
+avto vozi
+ladja pluje
+
+Encryption key:           Crypto:             Cleartext:
+kot nič                   riba je             reka
+nema                      nema
+petelin kikirika          ena ni
+ladja pluje               kot nič 
+                          kokoš kokodaka
+                          petelin kikirika
+                          avto vozi
+                          ladja pluje
+                          
+Encryption key:           Crypto:             Cleartext:
+m                         m                   muha
+m                         u 
+n                         n
+h                         m
+m                         a
+
+
